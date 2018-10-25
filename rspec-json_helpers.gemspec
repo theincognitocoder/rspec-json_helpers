@@ -20,6 +20,9 @@ Gem::Specification.new do |spec|
     'source_code_uri'   => 'https://github.com/theincognitocoder/rspec-json_helpers',
   }
 
+  spec.add_dependency('diff-lcs', '~> 1.3')
+  spec.add_dependency('diffy', '~> 3.2')
+
   spec.add_development_dependency('coveralls', '~> 0.8')
   spec.add_development_dependency('kramdown', '~> 1.16')
   spec.add_development_dependency('pry', '~> 0.11')
