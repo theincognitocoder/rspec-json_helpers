@@ -15,7 +15,7 @@ Rspec Json Helpers
 
 Add rspec-json_helpers to your project's Gemfile and then bundle install.
 
-    gem 'rspec-json_helpers', '0.9'
+    gem 'rspec-json_helpers', '~> 0.9'
 
 ## Basic Usage
 
