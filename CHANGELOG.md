@@ -7,6 +7,8 @@ Unreleased Changes
 
 * Make tests run in more versions of Ruby
 
+* Address rubocop errors.
+
 v0.9.1 (2018-10-25)
 --------------------
 

@@ -1,6 +1,9 @@
 AllCops:
   TargetRubyVersion: 2.3
 
+Layout/EmptyLinesAroundModuleBody:
+  EnforcedStyle: empty_lines_except_namespace
+
 Layout/FirstParameterIndentation:
   EnforcedStyle: consistent
 

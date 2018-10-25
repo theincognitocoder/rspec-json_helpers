@@ -15,7 +15,7 @@ module RSpec
       #   json value is not a string, or when when there is an error
       #   parsring string as JSON.
       def format(json)
-        dump_json(deep_sort(load_json(json)))
+        dump_json(deep_sort(parse_json(json)))
       rescue JSON::ParserError => e
         raise ArgumentError, 'Expected a string containing valid ' \
           "JSON; got #{e.class.name}: #{e.message}"
@@ -23,9 +23,9 @@ module RSpec
 
       private
 
-      def load_json(json)
+      def parse_json(json)
         if json.is_a?(String)
-          JSON.load(json)
+          JSON.parse(json)
         else
           raise ArgumentError, Kernel.format(WRONG_TYPE, type: json.class.name)
         end

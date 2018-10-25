@@ -2,8 +2,8 @@
 
 module RSpec
   module JsonHelpers
-    describe EqualJsonMatcher do
 
+    describe EqualJsonMatcher do
       it 'returns true when JSON values are equal' do
         matcher = EqualJsonMatcher.new('{}')
         expect(matcher.matches?('{}')).to be(true)
@@ -111,7 +111,7 @@ module RSpec
           EqualJsonMatcher.new('---')
         end.to raise_error(ArgumentError, /Expected a string containing valid JSON/)
       end
-
     end
+
   end
 end

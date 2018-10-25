@@ -4,6 +4,7 @@ require_relative 'json_helpers/equal_json_matcher'
 require_relative 'json_helpers/formatter'
 
 module RSpec
+  # Provides a `equal_json` rspec matcher.
   module JsonHelpers
 
     # @param [String<JSON>] expected
@@ -19,6 +20,7 @@ module RSpec
       # @return [String<JSON>]
       # @raise ArgumentError Raises an ArgumentError when the given
       #   value is not valid JSON. expected
+      # @api private
       def normalize_json(json)
         Formatter.new.format(json)
       end
