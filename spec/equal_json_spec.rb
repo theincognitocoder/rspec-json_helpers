@@ -103,7 +103,7 @@ module RSpec
       it 'raises an error when the expected value is not a string' do
         expect do
           EqualJsonMatcher.new(123)
-        end.to raise_error(ArgumentError, 'Expected a JSON string, got Fixnum.')
+        end.to raise_error(ArgumentError, /Expected a JSON string, got (Fixnum|Integer)./)
       end
 
       it 'raises an error when the expected value is not valid JSON' do
