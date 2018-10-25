@@ -4,7 +4,7 @@
 Gem::Specification.new do |spec|
   spec.name          = 'rspec-json_helpers'
   spec.version       = File.read(File.expand_path('VERSION', __dir__)).strip
-  spec.summary       = 'Rspec Json Helpers'
+  spec.summary       = 'RSpec helpers for working with JSON values.'
   spec.authors       = ['The Incognito Coder']
   spec.email         = ['theincognitocoder@gmail.com']
   spec.homepage      = 'https://github.com/theincognitocoder/rspec-json_helpers'
@@ -17,9 +17,7 @@ Gem::Specification.new do |spec|
     'changelog_uri'     => 'https://github.com/theincognitocoder/rspec-json_helpers/blob/master/CHANGELOG.md',
     'documentation_uri' => 'https://www.rubydoc.info/github/theincognitocoder/rspec-json_helpers/master',
     'homepage_uri'      => 'https://github.com/theincognitocoder/rspec-json_helpers',
-    'mailing_list_uri'  => 'https://gitter.im/theincognitocoder',
     'source_code_uri'   => 'https://github.com/theincognitocoder/rspec-json_helpers',
-    'wiki_uri'          => 'https://github.com/theincognitocoder/rspec-json_helpers/wiki',
   }
 
   spec.add_development_dependency('coveralls', '~> 0.8')

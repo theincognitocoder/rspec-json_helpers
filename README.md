@@ -15,13 +15,91 @@ Rspec Json Helpers
 
 Add rspec-json_helpers to your project's Gemfile and then bundle install.
 
-```ruby
-gem 'rspec-json_helpers', '0.1.0-alpha'
-```
+    gem 'rspec-json_helpers', '0.9'
 
 ## Basic Usage
 
-...
+Add the following statement to your `spec_helper.rb`
+
+    require 'rspec'
+    require 'rspec/json_helpers'
+
+You can now use the `equal_json` matcher in your RSpec tests. The `equal_json`
+matcher compares the expected and actual strings as JSON values. The two
+values must be equal.
+
+* Whitespace is not significant
+* JSON object attribute ordering is not signficant
+* Array value ordering is significant
+* null values are significant
+
+### Example: insignificant whitespace
+
+    it 'builds a JSON document' do
+      expect('{"foo":"bar"}').to equal_json(<<~JSON)
+        {
+          "foo" : "bar"
+        }
+      JSON
+    end
+
+### Example: insignificant attribute ordering
+
+    it 'builds a JSON document' do
+      expect('{"key-1":"value-1","key-2":"value-2"}').to equal_json(<<~JSON)
+        {
+          "key-2": "key-2"
+          "key-1": "value-1"
+        }
+      JSON
+    end
+
+### Example: Significant array ordering
+
+    it 'builds a JSON document' do
+      expect('[1,2,3]').to equal_json('[3,2,1]') # does not match
+    end
+
+result:
+
+    expected: [
+      1,
+      2,
+      3
+    ]
+
+    got: [
+      3,
+      2,
+      1
+    ]
+
+    Diff:  [
+    -  1,
+    +  3,
+       2,
+    -  3
+    +  1
+     ]
+
+### Example: Significant null values
+
+    it 'builds a JSON document' do
+      expect('{"key":null}').to equal_json('{}')
+    end
+
+result:
+
+    expected: {
+      "key": null
+    }
+
+    got: {
+    }
+
+    Diff:  {
+    -  "key": null
+     }
 
 ## License
 

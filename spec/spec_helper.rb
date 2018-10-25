@@ -2,8 +2,9 @@
 
 $LOAD_PATH.unshift(File.expand_path('../lib', __dir__))
 
-require 'simplecov'
 require 'coveralls'
+require 'simplecov'
+require 'rspec'
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   Coveralls::SimpleCov::Formatter,
@@ -11,4 +12,4 @@ SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
 ])
 SimpleCov.start
 
-require 'rspec-json_helpers'
+require 'rspec/json_helpers'
