@@ -3,6 +3,9 @@
 Unreleased Changes
 ------------------
 
+v0.9.2 (2018-10-25)
+--------------------
+
 * Add missing API keys for travis-ci
 
 * Make tests run in more versions of Ruby
