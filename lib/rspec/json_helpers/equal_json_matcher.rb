@@ -23,11 +23,7 @@ module RSpec
       end
 
       def failure_message
-        if @actual.is_a?(String)
-          diff_json_error_message
-        else
-          wrong_type_error_message
-        end
+        @wrong_type_error_message || diff_json_error_message
       end
 
       def failure_message_when_negated
@@ -45,10 +41,6 @@ module RSpec
       def diff
         diff = Diffy::Diff.new(@expected, @actual).to_s(@diff_format)
         diff.lines[0..-2].join
-      end
-
-      def wrong_type_error_message
-        @wrong_type_error_message
       end
 
     end
