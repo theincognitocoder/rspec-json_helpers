@@ -104,6 +104,12 @@ module RSpec
           expect('---').to equal_json('{}')
         end.to raise_error(/Expected a string containing valid JSON/)
       end
+
+      it 'implements a negation error message' do
+        expect do
+          expect('{}').not_to equal_json('{}')
+        end.to raise_error('expected JSON value not to be equal')
+      end
     end
 
   end

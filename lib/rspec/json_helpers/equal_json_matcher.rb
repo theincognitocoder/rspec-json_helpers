@@ -31,7 +31,7 @@ module RSpec
       end
 
       def failure_message_when_negated
-        raise NotImplementedError
+        'expected JSON value not to be equal'
       end
 
       def diff_json_error_message
