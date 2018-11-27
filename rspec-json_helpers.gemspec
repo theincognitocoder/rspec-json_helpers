@@ -13,11 +13,11 @@ Gem::Specification.new do |spec|
   spec.files         = Dir['lib/**/*.rb']
 
   spec.metadata = {
-    'bug_tracker_uri'   => 'https://github.com/theincognitocoder/rspec-json_helpers/issues',
-    'changelog_uri'     => 'https://github.com/theincognitocoder/rspec-json_helpers/blob/master/CHANGELOG.md',
+    'bug_tracker_uri' => 'https://github.com/theincognitocoder/rspec-json_helpers/issues',
+    'changelog_uri' => 'https://github.com/theincognitocoder/rspec-json_helpers/blob/master/CHANGELOG.md',
     'documentation_uri' => 'https://www.rubydoc.info/github/theincognitocoder/rspec-json_helpers/master',
-    'homepage_uri'      => 'https://github.com/theincognitocoder/rspec-json_helpers',
-    'source_code_uri'   => 'https://github.com/theincognitocoder/rspec-json_helpers',
+    'homepage_uri' => 'https://github.com/theincognitocoder/rspec-json_helpers',
+    'source_code_uri' => 'https://github.com/theincognitocoder/rspec-json_helpers',
   }
 
   spec.add_dependency('diff-lcs', '~> 1.3')
