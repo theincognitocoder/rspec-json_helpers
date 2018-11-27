@@ -1,4 +1,4 @@
-# Rspec Json Helpers
+# Rspec JSON Helpers
 
 [![Build Status](https://travis-ci.org/theincognitocoder/rspec-json_helpers.svg?branch=master)](https://travis-ci.org/theincognitocoder/rspec-json_helpers)
 [![Coverage Status](https://coveralls.io/repos/github/theincognitocoder/rspec-json_helpers/badge.svg?branch=master)](https://coveralls.io/github/theincognitocoder/rspec-json_helpers?branch=master)
